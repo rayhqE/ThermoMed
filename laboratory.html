@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Average Temperature - ThermoMed</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f4f7;
+            background-image: url('bg.jpg');
+            background-size: cover; /* Ensures the image covers the entire body */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+        }
+
+        header {
+            padding: 15px 30px;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            width: 60px;
+            height: 60px;
+        }
+
+        header .logo span {
+            font-size: 2rem;
+            color: #333;
+            margin-left: 10px;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav div {
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        nav div:hover {
+            background-color: #387ed1;
+            color: #fff;
+        }
+
+        .content {
+            padding: 120px 20px 50px;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            color: #424242;
+            margin-bottom: 30px;
+            font-family: 'Georgia', serif;
+        }
+
+        .average-temperature {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            padding: 40px 20px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .average-temperature h2 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .high-temperature {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logomed.avif" alt="ThermoMed Logo">
+            <span>ThermoMed</span>
+        </div>
+        <nav>
+            <div onclick="window.location.href='index.html'">Home</div>
+            <div onclick="window.location.href='medicine-list.html'">List of Medicine</div>
+            <div onclick="window.location.href='laboratory.html'">Laboratory</div>
+            <div onclick="scrollToSection('quality-check')">Quality Checker</div>
+            <div onclick="window.location.href='about-us.html'">About Us</div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div id="average-temperature" class="average-temperature">
+            <h2>Loading...</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about-us.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            padding: 10px 30px;
+            background-color: #fff;
+            box-shadow: 2px 1px 2px #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            width: 80px;
+            height: 80px;
+        }
+
+        header .logo span {
+            font-size: 2.5rem;
+            color: #333;
+            margin-left: 10px;
+            font-family: sans-serif;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            margin-top: 120px; /* Adjust this value based on header height */
+        }
+
+        .content {
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .content p {
+            font-style: oblique;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            padding: 10px;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logomed.avif" alt="ThermoMed Logo">
+            <span>ThermoMed</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="medicine-list.html">List of Medicine</a>
+            <a href="#quality-check">Quality Checker</a>
+            <a href="laboratory.html">Laboratory</a>
+            
+            <a href="about-us.html">About Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="content">
+            <h1>About Us</h1>
+            <p>Welcome to our website! We are dedicated to providing the best service and products to our customers. Our company was founded with the vision of making a difference in the industry.</p>
+            <p>We believe in quality, innovation, and customer satisfaction. Our team is committed to excellence and works tirelessly to bring you the best experience.</p>
+            <p>Learn more about our journey and what makes us unique by clicking the button below.</p>
+            <button id="learnMoreBtn">Learn More</button>
+        </section>
+
+        <section id="moreInfo" class="hidden">
+            <h2>Our Journey</h2>
+            <p>Since our inception, we have grown tremendously, thanks to the support of our customers and the dedication of our team. We started with a small idea, and today, we are proud to be a leader in our field.</p>
+            <h2>What Makes Us Unique</h2>
+            <p>Our unique approach to problem-solving, our commitment to sustainability, and our passion for innovation set us apart. We are constantly evolving to meet the needs of our customers and the challenges of the industry.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Our Company. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="about-us.js"></script>
+</body>
+</html>

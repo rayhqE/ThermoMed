@@ -1,0 +1,90 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+header {
+    padding: 10px 30px;
+    background-color: #fff;
+    box-shadow: 2px 1px 2px #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+}
+
+header .logo span {
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 10px;
+    font-family: sans-serif;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav div {
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav div:hover {
+    background-color: #f0f0f0;
+}
+
+.medicine-list-section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.medicine-list-section h1 {
+    font-size: 2.5rem;
+    color: #424242;
+    margin-bottom: 20px;
+}
+
+/* Medicine Table Styling */
+.medicine-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.medicine-table th, .medicine-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.medicine-table th {
+    background-color: #387ed1;
+    color: #fff;
+    font-weight: bold;
+}
+
+.medicine-table tr:hover {
+    background-color: #f0f0f0;
+}

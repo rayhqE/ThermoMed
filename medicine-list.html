@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine List - ThermoMed</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            padding: 10px 30px;
+            background-color: #fff;
+            box-shadow: 2px 1px 2px #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            width: 80px;
+            height: 80px;
+        }
+
+        header .logo span {
+            font-size: 2.5rem;
+            color: #333;
+            margin-left: 10px;
+            font-family: sans-serif;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+            color: #387ed1; /* Highlight color */
+        }
+
+        .medicine-list-section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .medicine-list-section h1 {
+            font-size: 2.5rem;
+            color: #424242;
+            margin-bottom: 20px;
+        }
+
+        .medicine-table {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .medicine-table th, .medicine-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .medicine-table th {
+            background-color: #387ed1;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .medicine-table tr {
+            transition: transform 0.3s;
+        }
+
+        .medicine-table tr:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-5px);
+        }
+
+        .arrow {
+            display: none; /* Initially hidden */
+            color: red;
+            font-size: 1.5rem;
+        }
+
+        .highlighted {
+            background-color: #ffe5e5; /* Optional highlight color */
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logomed.avif" alt="ThermoMed Logo">
+            <span>ThermoMed</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="medicine-list.html">List of Medicine</a>
+            <a href="index.html#quality-check">Quality Checker</a>
+            <a href="laboratory.html">Laboratory</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+    </header>
+
+    <div class="medicine-list-section">
+        <h1>List of Medicines</h1>
+        <table id="medicine-table" class="medicine-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Medicine Name</th>
+                    <th>Threshold Temperature (°C)</th>
+                    <th>Status</th> <!-- Added column for Status -->
+                </tr>
+            </thead>
+            <tbody id="medicine-list">
+                <!-- Table rows will be dynamically generated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch and populate medicine list
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.getElementById('medicine-list');
+                    data.forEach(med => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${med.medicine_id}</td>
+                            <td>${med.medicine_name}</td>
+                            <td>${med.threshold_temperature_celsius}</td>
+                            <td><span class="arrow">&#8595;</span></td> <!-- Added Status column with arrow -->
+                        `;
+                        tableBody.appendChild(row);
+                    });
+
+                    // Update medicine status based on saved temperature
+                    updateMedicineList();
+                })
+                .catch(error => console.error('Error loading JSON data:', error));
+
+            // Function to update medicine list based on temperature
+            function updateMedicineList() {
+                // Retrieve the current temperature from localStorage
+                const savedTemperature = parseFloat(localStorage.getItem('currentTemperature')) || 15;
+
+                const rows = document.querySelectorAll('#medicine-list tr');
+
+                rows.forEach(row => {
+                    const thresholdCell = row.cells[2]; // Threshold temperature is in the 3rd cell
+                    const threshold = parseFloat(thresholdCell.textContent);
+                    const arrow = row.querySelector('.arrow');
+
+                    if (savedTemperature > threshold) {
+                        arrow.style.display = 'inline'; // Show the arrow if temperature exceeds threshold
+                        row.classList.add('highlighted'); // Optional: highlight the row
+                    } else {
+                        arrow.style.display = 'none'; // Hide the arrow if temperature is below threshold
+                        row.classList.remove('highlighted'); // Optional: remove highlight
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

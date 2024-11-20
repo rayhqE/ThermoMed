@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThermoMed - Medicine Quality Checker</title>
+    <style>
+        /* Your existing CSS styles */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            padding: 10px 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            width: 80px;
+            height: 80px;
+        }
+
+        header .logo span {
+            font-size: 2.5rem;
+            color: #333;
+            margin-left: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+            color: #387ed1;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section img {
+            max-width: 50%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            color: #424242;
+            margin: 0;
+        }
+
+        .quote-section {
+            text-align: center;
+            margin: 40px 20px;
+        }
+
+        .quote-section h2 {
+            font-size: 1.5rem;
+            color: #666;
+            margin: 0;
+            font-style: italic;
+        }
+
+        .quality-check-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .quality-check-section:hover {
+            transform: translateY(-10px);
+        }
+
+        .quality-check-section h2 {
+            margin: 20px 0;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .quality-check-section p {
+            font-size: 2rem;
+            color: #f00;
+            margin: 20px 0;
+        }
+
+        .quality-check-section button {
+            background: #387ed1;
+            border: 1px solid #387ed1;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background 0.3s, border-color 0.3s;
+        }
+
+        .quality-check-section button:hover {
+            background: #2a5a9a;
+            border-color: #2a5a9a;
+        }
+
+        .medicine-list-section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+   </script>
+    <script type="text/javascript">
+   (function(){
+  emailjs.init({
+    publicKey: "07Nn4bGQoHB-EuAAi",
+  });
+})();
+</script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logomed.avif" alt="ThermoMed Logo">
+            <span>ThermoMed</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="medicine-list.html">List of Medicine</a>
+            <a href="#quality-check">Quality Checker</a>
+            <a href="laboratory.html">Laboratory</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <img src="medimg2.avif" alt="Medicine Image">
+        <h1>Protecting Lives with Quality: Medicine You Can Trust</h1>
+    </div>
+
+    <div class="quote-section">
+        <h2>"The quality of medicine is not just a matter of health; it's a matter of life and death."</h2>
+    </div>
+
+    <div id="quality-check" class="quality-check-section">
+        <h2>Medicine Quality Checker</h2>
+        <p>Current Simulated Temperature: <span id="simulated-temperature">--</span>°C</p>
+        <button id="check-quality">Check Medicine Quality</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

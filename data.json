@@ -1,0 +1,252 @@
+[
+  {
+    "medicine_id": 1,
+    "medicine_name": "Paracetamol",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 2,
+    "medicine_name": "Aspirin",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 3,
+    "medicine_name": "Ibuprofen",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 4,
+    "medicine_name": "Amoxicillin",
+    "threshold_temperature_celsius": 20
+  },
+  {
+    "medicine_id": 5,
+    "medicine_name": "Ciprofloxacin",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 6,
+    "medicine_name": "Metformin",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 7,
+    "medicine_name": "Omeprazole",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 8,
+    "medicine_name": "Lisinopril",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 9,
+    "medicine_name": "Losartan",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 10,
+    "medicine_name": "Simvastatin",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 11,
+    "medicine_name": "Levothyroxine",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 12,
+    "medicine_name": "Amlodipine",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 13,
+    "medicine_name": "Clopidogrel",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 14,
+    "medicine_name": "Atorvastatin",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 15,
+    "medicine_name": "Warfarin",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 16,
+    "medicine_name": "Metoprolol",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 17,
+    "medicine_name": "Pantoprazole",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 18,
+    "medicine_name": "Sertraline",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 19,
+    "medicine_name": "Escitalopram",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 20,
+    "medicine_name": "Fluoxetine",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 21,
+    "medicine_name": "Doxycycline",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 22,
+    "medicine_name": "Azithromycin",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 23,
+    "medicine_name": "Prednisone",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 24,
+    "medicine_name": "Albuterol",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 25,
+    "medicine_name": "Montelukast",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 26,
+    "medicine_name": "Furosemide",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 27,
+    "medicine_name": "Hydrochlorothiazide",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 28,
+    "medicine_name": "Glipizide",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 29,
+    "medicine_name": "Loratadine",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 30,
+    "medicine_name": "Cetirizine",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 31,
+    "medicine_name": "Ceftriaxone",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 32,
+    "medicine_name": "Dexamethasone",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 33,
+    "medicine_name": "Insulin",
+    "threshold_temperature_celsius": 8
+  },
+  {
+    "medicine_id": 34,
+    "medicine_name": "Alprazolam",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 35,
+    "medicine_name": "Diazepam",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 36,
+    "medicine_name": "Codeine",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 37,
+    "medicine_name": "Tramadol",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 38,
+    "medicine_name": "Gabapentin",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 39,
+    "medicine_name": "Pregabalin",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 40,
+    "medicine_name": "Ranitidine",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 41,
+    "medicine_name": "Famotidine",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 42,
+    "medicine_name": "Lorazepam",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 43,
+    "medicine_name": "Cyclobenzaprine",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 44,
+    "medicine_name": "Tizanidine",
+    "threshold_temperature_celsius": 30
+  },
+  {
+    "medicine_id": 45,
+    "medicine_name": "Hydrocodone",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 46,
+    "medicine_name": "Methadone",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 47,
+    "medicine_name": "Clindamycin",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 48,
+    "medicine_name": "Vancomycin",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 49,
+    "medicine_name": "Meropenem",
+    "threshold_temperature_celsius": 25
+  },
+  {
+    "medicine_id": 50,
+    "medicine_name": "Imipenem",
+    "threshold_temperature_celsius": 25
+  }
+]
