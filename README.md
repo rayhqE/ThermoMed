@@ -1,4 +1,5 @@
-This was my SIH project. :)
+This was my SIH project. 🙂 
+
 **Dynamic Website for Quality Monitoring**  
 
 Developed a website for **online testing and monitoring** of medicine and consumable quality during the **Smart India Hackathon (SIH)**.  
